@@ -34,7 +34,7 @@ To better understand and use the code:
 
 1. Copy the code from .py file and look up at .ipynb file to see the content
 
-2. Edit Paths Before Running
+2. Edit Paths Before Running (Link to load the dataset is in the report)
   
 Make sure to update the following paths in the code before execution:
 - 🔧 Dataset Path in the configuration/setup section
