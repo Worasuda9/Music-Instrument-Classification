@@ -29,6 +29,18 @@ Do NOT run Threading and ThreadPoolExecutor simultaneously.
 - You should choose one method at a time to run.
 - Always restart the runtime/session before switching between threading methods to ensure a clean and fair comparison.
 
+📝 Recommended Usage Guidelines
+To better understand and use the code:
+- Copy the code from .py file and look up at .ipynb file to see the content
+- Edit Paths Before Running
+  
+Make sure to update the following paths in the code before execution:
+- 🔧 Dataset Path in the configuration/setup section
+- 🎵 new_audio_path in the instrument prediction part (used for testing new audio)
+- 📈 Waveform Path used for visualization or feature extraction
+
+These edits are necessary for the code to run correctly in your environment.
+
 🧪 Workflow Overview
 
 1. Data Preprocessing
