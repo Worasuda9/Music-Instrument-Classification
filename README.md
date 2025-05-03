@@ -31,8 +31,9 @@ Do NOT run Threading and ThreadPoolExecutor simultaneously.
 
 📝 Recommended Usage Guidelines
 To better understand and use the code:
-- Copy the code from .py file and look up at .ipynb file to see the content
-- Edit Paths Before Running
+Copy the code from .py file and look up at .ipynb file to see the content
+
+Edit Paths Before Running
   
 Make sure to update the following paths in the code before execution:
 - 🔧 Dataset Path in the configuration/setup section
