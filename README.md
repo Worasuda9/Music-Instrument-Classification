@@ -51,6 +51,7 @@ This comparative study helps assess how parallelism strategies affect real-world
 - Labels are one-hot encoded.
 
 4. Model Architecture
+
 A CNN model with the following structure:
 
 Conv2D(32) → MaxPooling → Dropout  
@@ -66,23 +67,29 @@ Flatten → Dense(128) → Dropout → Output Layer (Softmax)
 - Visualize training history if needed.
 
 🔍 Prediction
+
 To predict the instrument of a new audio file:
 - predict_instrument("path/to/audio.wav", model, label_encoder)
 
 📊 Example Visualizations
+
 Mel-Spectrogram:
 - librosa.display.specshow(mel, x_axis='time', y_axis='mel', sr=SAMPLE_RATE)
+
 Waveform (optional):
 - y, sr = librosa.load(path)
 - plt.plot(y)
   
 📄 Output Example
+
 Predicted Instrument: Violin
 
 💾 Saving Extracted Features (Optional)
+
 Export features to CSV:
 - mel_db_df.to_csv('mel_spectrograms_table.csv', index=False)
   
 🔚 Conclusion
+
 This project demonstrates how to build a CNN-based classifier using spectrograms extracted from audio. With multithreading and efficient preprocessing, even moderate datasets can be processed quickly and used for accurate instrument recognition.
 
