@@ -22,6 +22,13 @@ scikit-learn
 
 psutil
 
+⚠️ Important Reminder
+
+Do NOT run Threading and ThreadPoolExecutor simultaneously.
+- Running both in the same session can lead to inaccurate timing results due to shared resource contention.
+- You should choose one method at a time to run.
+- Always restart the runtime/session before switching between threading methods to ensure a clean and fair comparison.
+
 🧪 Workflow Overview
 
 1. Data Preprocessing
