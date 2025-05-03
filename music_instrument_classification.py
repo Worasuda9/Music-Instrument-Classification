@@ -27,13 +27,10 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from concurrent.futures import ThreadPoolExecutor
 
-from google.colab import drive
-drive.mount('/content/drive')
-
 """# Configuration"""
 
 # Config
-DATASET_PATH = "/content/drive/MyDrive/Colab Notebooks/music/Train"
+DATASET_PATH = "Put dataset path here"
 SAMPLE_RATE = 22050
 DURATION = 5
 SAMPLES_PER_TRACK = SAMPLE_RATE * DURATION
@@ -247,7 +244,7 @@ def predict_instrument(file_path, model, label_encoder):
     return predicted_label
 
 # Show prediction
-new_audio_path = "/content/drive/MyDrive/Colab Notebooks/music/Test_submission/Sad-Violin-Slow-K-www.fesliyanstudios.com.wav"
+new_audio_path = "Put test path here"
 label_encoder = LabelEncoder()
 label_encoder.fit(labels)
 predicted = predict_instrument(new_audio_path, model, label_encoder)
@@ -266,7 +263,7 @@ print("Labels:", set(labels))
 """# Waveform"""
 
 # Load audio file
-y, sr = librosa.load('/content/drive/MyDrive/Colab Notebooks/music/Test_submission/Sad-Violin-Slow-K-www.fesliyanstudios.com.wav', sr=None)  # y = waveform, sr = sampling rate
+y, sr = librosa.load('Test_submission/Sad-Violin-Slow-K-www.fesliyanstudios.com.wav', sr=None)  # y = waveform, sr = sampling rate
 
 plt.figure(figsize=(10, 3))
 librosa.display.waveshow(y, sr=sr)
@@ -276,7 +273,7 @@ plt.ylabel("Amplitude")
 plt.show()
 
 # Load audio file
-y, sr = librosa.load('/content/drive/MyDrive/Colab Notebooks/music/Test_submission/ROOM_room6_MUS_pachelbel_DEV_amazon.wav', sr=None)  # y = waveform, sr = sampling rate
+y, sr = librosa.load('Test_submission/ROOM_room6_MUS_pachelbel_DEV_amazon.wav', sr=None)  # y = waveform, sr = sampling rate
 
 plt.figure(figsize=(10, 3))
 librosa.display.waveshow(y, sr=sr)
@@ -286,7 +283,7 @@ plt.ylabel("Amplitude")
 plt.show()
 
 # Load audio file
-y, sr = librosa.load('/content/drive/MyDrive/Colab Notebooks/music/Test_submission/acoustic-guitar-logo-13084.wav', sr=None)  # y = waveform, sr = sampling rate
+y, sr = librosa.load('Test_submission/acoustic-guitar-logo-13084.wav', sr=None)  # y = waveform, sr = sampling rate
 
 plt.figure(figsize=(10, 3))
 librosa.display.waveshow(y, sr=sr)
@@ -296,7 +293,7 @@ plt.ylabel("Amplitude")
 plt.show()
 
 # Load audio file
-y, sr = librosa.load('/content/drive/MyDrive/Colab Notebooks/music/Test_submission/rock-drum-loop-85371.wav', sr=None)  # y = waveform, sr = sampling rate
+y, sr = librosa.load('Test_submission/rock-drum-loop-85371.wav', sr=None)  # y = waveform, sr = sampling rate
 
 plt.figure(figsize=(10, 3))
 librosa.display.waveshow(y, sr=sr)
